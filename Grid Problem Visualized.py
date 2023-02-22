@@ -186,32 +186,3 @@ while True:
             else:
                 print("Not found")
     check_events()
-
-# def trace_path(grid, initial_position, target_position):
-#     visited = [target_position]
-#     path = [target_position]
-#     queue = [target_position]
-#
-#     current_position = target_position
-#     while queue:
-#         current_position = queue.pop(0)
-#         print(current_position)
-#         possible_movements = [(1, 0), (0, 1), (-1, 0), (0, -1)]
-#         result = list(map(lambda movement: (current_position[0] + movement[0], current_position[1] + movement[1]),
-#                           possible_movements))
-#         result = list(filter(
-#             lambda new_position: 0 <= new_position[0] <= array_dimensions[0] - 1 and 0 <= new_position[1] <=
-#                                  array_dimensions[0] - 1 and (new_position not in visited), result))
-#         steps = list(map(lambda position: grid[position[0]][position[1]], result))
-#         steps = list(filter(lambda x: x != -1, steps))
-#         steps = list(filter(lambda x: x != 1000, steps))
-#         steps.sort()
-#         for new_position in result:
-#             path.append(new_position)
-#             visited.append(new_position)
-#             queue.append(new_position)
-#         print(path)
-#         current_position = path[-1]
-#     path.reverse()
-#     for i in path:
-#         draw_rect_at_current_position(i, "yellow")
